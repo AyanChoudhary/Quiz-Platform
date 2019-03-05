@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+@import url('https://fonts.googleapis.com/css?family=Charm');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Acme');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script');
+
+body
+{
+    padding: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+}
+
+.topbar
+{
+    font-family: Lobster;
+    width: 100vw;
+    padding: 0.75vw;   
+    text-align: center;
+    color: white;
+    font-size: 2vw;
+    background-color: black;
+
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+    
+}
+
+.nav
+{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    justify-self: flex-start;
+    align-self: center;
+
+    cursor: pointer;
+    font-size: 3vh;
+    width: 10vw;
+}
+
+a
+{
+    text-decoration: none;
+    color: white;
+}
+
+a:active :visited
+{
+    color: white;
+}
+
+.toptext
+{
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+}
+
+.logout_btn
+{
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    justify-self: right;
+    align-self: center;
+    width: 20vw;
+}
+
+.logt_btn
+{
+    height: 5vh;
+    width: 10vw;
+    background: white;
+    border: 0.25vh solid black;
+    font-weight: bold;
+    font-family: Kaushan Script;
+    font-size: 2.5vh;
+
+    align-content: center;
+    cursor: pointer;
+}
+
+.top_content
+{
+    font-family: Dancing Script;
+    text-align: center;
+    font-size: 3vw;
+    padding: 2.5vw;
+    font-weight: bold;
+}
+
+.form
+{
+    width: 100vw;
+    padding: 2vw;
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+}
+
+.head
+{
+    font-family: Charm;
+    font-size: 2vw;
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
+    text-align: center;
+    margin-bottom: 2vw;
+    font-weight: bold;
+}
+
+.admin_rad
+{
+    padding-right: 3vw;
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+    justify-self: right;
+}
+
+#admin
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 1.75vh;
+    height: 1.75vh;
+
+    border: 0.20vh solid gray;
+    transition: 0.2s all ease-in;
+    outline: none;
+    margin-right: 0.25vw;
+}
+
+#admin:checked
+{
+    border: 0.50vh solid black;    
+}
+
+.partici_rad
+{
+    padding-left: 3vw;
+    grid-column: 2 / span 1;
+    grid-row: 2 / span 1;
+    justify-self: left;
+}
+
+#partici
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 1.75vh;
+    height: 1.75vh;
+
+    border: 0.20vh solid gray;
+    transition: 0.2s all ease-in;
+    outline: none;
+    margin-right: 0.25vw;
+}
+
+#partici:checked
+{
+    border: 0.50vh solid black;    
+} 
+
+.usr
+{
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;
+    justify-self: center;
+    padding-top: 2vw;
+    padding-bottom: 1.5vw;
+}
+
+.psw
+{
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 1;
+    justify-self: center;
+    padding-top: 1.5vw;
+}
+
+.holder
+{
+    border: 0.15vw solid black;
+    width: 50vw;
+    height: 6vh;
+    padding: 0.5vw;
+    font-family: Charm;
+    caret-color: black;
+    font-size: 1.25vw;
+}
+
+.holder:focus
+{
+    outline: none;
+}
+
+.log_btn
+{
+    padding-left: 3vw;
+    grid-column: 1 / span 1;
+    grid-row: 5 / span 1;
+    justify-self: right; 
+}
+
+.login
+{
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 3.5vw;
+    width: 12vw;
+    height: 7vh;
+    font-size: 1.5vw;
+    font-family: Kaushan Script;
+}
+
+.reg_btn
+{
+    padding-left: 3vw;
+    grid-column: 2 / span 1;
+    grid-row: 5 / span 1;
+    justify-self: left;
+}
+
+.reg
+{
+    background-color: white;
+    color: black;
+    border: 0.2vw solid black;
+    cursor: pointer;
+    margin: 3.5vw;
+    width: 12vw;
+    height: 7vh;
+    font-size: 1.5vw;
+    font-family: Pacifico;
+}
+
+.btn
+{
+    width: 100%;
+    padding: 2vh;
+    text-align: center;
+}
+
+.buttn
+{
+    background: black;
+    color: white;
+    border: none;
+    width: 50vw;
+    height: 5vh;
+
+    font-family: Pacifico;
+    font-size: 2.5vh;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.question_populate
+{
+    padding: 4vh;
+    font-size: 3vh;
+    font-family: Kaushan Script;
+    
+}
+
+.options
+{
+    padding: 2vh;
+    font-size: 2.5vh;
+
+}
+
+.main
+{
+    padding: 2vh;
+}
+
+.hold
+{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto;
+}
+
+.rank_1
+{
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    padding: 3vh;
+
+    font-family: Pacifico;
+    font-size: 4vh;
+}
+
+.user_1
+{
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    padding: 3vh;
+
+    font-family: Pacifico;
+    font-size: 4vh;
+}
+
+.pts_1
+{
+    grid-column: 3 / span 1;
+    grid-row: 1 / span 1;
+    justify-self: center;
+    padding: 3vh;
+
+    font-family: Pacifico;
+    font-size: 4vh;
+}
+
+table
+{
+    width: 92%;
+    margin: auto;
+}
+
+tbody
+{
+    margin-right: 16vh;
+    margin-left: 16vh;
+}
+
+tr
+{
+    text-align: center;
+    border-bottom: 0.25vh solid black;
+}
+
+td
+{
+    align-content: center;
+    font-family: Yanone Kaffeesatz;
+    font-size: 3vh;
+    padding: 1vh; 
+
+    border-bottom: 0.25vh solid black;
+}
+
+.start
+{
+    margin-left: 8vh;
+}
+
+.end
+{
+    margin-right: 8vh;
+}

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>Login</title>
+    </head>
+
+    <body>
+            <form action="authenticate.php" method="GET">
+
+                    <div class="form">
+
+                        <div class="head">Login</div>
+            
+                        <div class="admin_rad">
+                            <input type="radio" id="admin" name="acc_type" value="admin" checked>
+                            <label for="admin" class="rad_desc"> Administrator</label>
+                        </div>
+
+                        <div class="partici_rad">
+                            <input type="radio" id="partici" name="acc_type" value="participant">
+                            <label for="partici" class="rad_desc">Participant</label>
+                        </div>
+
+                        <div class="usr"><input type="text" placeholder="Username" class="holder" name="usr" required autofocus></div>
+                        <div class="psw"><input type="password" placeholder="Password" class="holder" name="psw" required></div>
+
+                        <div class="log_btn"><button type="submit" class="login">Login</button></div>
+                        <div class="reg_btn"><button type="button" class="reg">Register</button></div>
+
+                    </div>
+                </form>
+    </body>
+</html>
