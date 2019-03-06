@@ -1,8 +1,6 @@
 <?php
-    $id = $_POST['id'];
-    $answer = $_POST["'optn'.$id"];
-    $points = 0;
     $usr_id = $_POST['usr_id'];
+    $points = 0;
 
     $server = "localhost";
     $username = "root";
@@ -17,22 +15,39 @@
 
     else 
     {
-        $query = $link->query("SELECT * FROM Questions WHERE id = '".$id."'");
-        $result = mysqli_fetch_assoc($query);
-
-        if ($answer === $result['answer'])
+        for ($dum = 1; $dum >= 1; $dum++)
         {
-            $points += $result['points'];
-        }
+            $id_dum = $_POST["id$dum"];
+            $ans_dum = $_POST["optn$dum"];
 
-        else 
-        {
-            $points += 0;
+            if ($dum == $id_dum)
+
+            {
+
+                $query = $link->query("SELECT * FROM Questions WHERE id = '".$id_dum."'");
+                $result = mysqli_fetch_assoc($query);
+
+                if ($ans_dum == $result['answer'])
+                {
+                    $points += $result['points'];
+                }
+
+                else 
+                {
+                    $points += 0;
+                }
+
+            }
+
+            else
+            break;
+
         }
 
         $link->query("UPDATE Users SET points = '".$points."' WHERE id = '".$usr_id ."'");
         $link->query("UPDATE Users SET solved = 1 WHERE id = '".$usr_id."'");
-        header('Location: leaderboard.php');
+        header('Location: logout.php');
+        
     }
 
 ?>

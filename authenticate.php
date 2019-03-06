@@ -35,7 +35,11 @@ else {
                     $_SESSION['sess_name'] = $usr1['name'];
                     $_SESSION['sess_role'] = $role;
 
+                    if($_SESSION['sess_solved'] == 0)
                     header('Location: participant.php');
+
+                    else
+                    header('Location: leaderboard.php');
                 }
 
                 else

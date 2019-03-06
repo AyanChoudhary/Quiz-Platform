@@ -32,8 +32,10 @@
             break;
         }
 
-        $link->query("INSERT INTO Questions (id, points, question, answer, option1, option2, option3, option4) 
-        VALUES ('".$id."', '".$points."', '".$question."', '".$answer."', '".$option1."', '".$option2."', '".$option3."', '".$option4."')");
+        $ques = "INSERT INTO Questions (id, points, question, answer, option1, option2, option3, option4) 
+        VALUES ('".$id."', '".$points."', '".$question."', '".$answer."', '".$option1."', '".$option2."', '".$option3."', '".$option4."')";
+
+        $link->query($ques);
 
         header('Location: admin.php');
     }

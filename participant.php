@@ -66,7 +66,7 @@
                         if ($id == $result['id'])
                         {
                             echo '<div class="question_populate">
-                                <div class="question">'.$result['id'].'. '.$result['question'].'<input type="hidden" name="id" value='.$result['id'].'/></div>
+                                <div class="question">'.$result['id'].'. '.$result['question'].'<input type="hidden" name="id'.$id.'" value='.$result['id'].'></div>
                                 <div class="options">
                                     <div class="opt1"><input type="radio" id="admin" name="optn'.$id.'" value='.$result['option1'].' checked>
                                     <label for="admin" class="rad_desc">'.$result['option1'].'</label></div>
@@ -90,7 +90,7 @@
                         }
 
                     }
-                        echo'<input type="hidden" name="usr_id" value='.$usr_id.'/>';
+                        echo'<input type="hidden" name="usr_id" value="'.$usr_id.'">';
                     ?>
 
                     <?php
