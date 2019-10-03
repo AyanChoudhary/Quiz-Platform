@@ -1,0 +1,5 @@
+# ignore all logs
+vendor/
+
+# ignore credential
+credential.php
